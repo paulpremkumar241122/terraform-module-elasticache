@@ -42,7 +42,6 @@ resource "aws_elasticache_replication_group" "main" {
   subnet_group_name          = aws_elasticache_subnet_group.main.name
   parameter_group_name       = "default.redis6.x.cluster.on"
   security_group_ids         = [ aws_security_group.sg.id ]
-  storage_encrypted          = true
   kms_key_id                 = var.kms_key_arn
 }
 
